@@ -1,5 +1,5 @@
 <?php
 
-# Silence is golden.
+# Silence is [ B E A U T Y ].
 
 ?>
