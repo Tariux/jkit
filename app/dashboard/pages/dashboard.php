@@ -3,15 +3,17 @@
 
 function jkit_admin_page()
 {
-    echo "<h2>" . __('JKIT Setting', 'jkit') . "</h2>";
+    load_jkit_theme('dashboard/jkit_admin_page');
+
 }
 
 function jkit_admin_page_settings()
 {
-    echo "<h2>" . __('Settings', 'jkit') . "</h2>";
+    load_jkit_theme('dashboard/jkit_admin_page_settings');
 }
 
 function jkit_admin_page_about()
 {
-    echo "<h2>" . __('About', 'jkit') . "</h2>";
+    load_jkit_theme('dashboard/jkit_admin_page_about');
+
 }

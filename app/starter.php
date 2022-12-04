@@ -8,6 +8,7 @@ class JStarter {
     {
 
         require_once(JKIT_DIR . '/app/dashboard/pages/dashboard.php');
+        require_once(JKIT_DIR . '/app/includes/functions.php');
 
         $this->init();
 
