@@ -4,11 +4,13 @@
 function jkit_admin_page()
 {
     load_jkit_theme('dashboard/jkit_admin_page');
-
+    
 }
 
 function jkit_admin_page_settings()
 {
+
+    load_jkit_inc('admin/update_settings');
     load_jkit_theme('dashboard/jkit_admin_page_settings');
 }
 

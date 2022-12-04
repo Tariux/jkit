@@ -18,12 +18,41 @@ class JStarter {
 
     public function init()
     {
+
+        $this->define_jkit_store();
         load_jkit_theme_style("main");
         add_action('admin_menu', ['JKit\JStarter', 'jkit_add_menu_page']);
 
     }
 
-    
+    public function define_jkit_store()
+    {
+        //update_option(JKIT_STORE , null); // For reset to default data
+        //update_option('jkit_install_time' , null); // For reset to default data
+
+
+        
+        if (
+            empty(get_option('jkit_install_time')) 
+        ) {
+            update_option('jkit_install_time' , date('l jS \of F Y h:i:s A'));
+        }
+
+
+        if (
+            empty(get_option(JKIT_STORE)) 
+        ) {
+
+            $default_data = [
+                'installed' => true,
+                'status' => 'Active',
+            ];
+            update_option(JKIT_STORE , $default_data);
+
+            $options = get_option(JKIT_STORE);
+        }
+    }
+
     public static function jkit_add_menu_page()
     {
         add_menu_page(__('JKit', 'jkit'), __('JKit', 'jkit'),

@@ -89,8 +89,10 @@
  
 </style>
 
+
 <div class="jkit-dashboard-settings">
     <h1 class="title">[ JKit WordPress Plugin ]</h1>
+
     <hr>
     <div class="plugin-detail">
         <div class="plugin-desc">
@@ -99,11 +101,11 @@
         <div class="plugin-desc" style="font-weight: 700;">
             <p>Version: 1.0.0</p>
             <p>Author: 1.0.0</p>
-            <p>Last Update: 2022/11/29 - 02:02 PM</p>
-            <p>Status: <span style="color: green;">Active</span></p>
+            <p>Installed at: <?php echo get_option('jkit_install_time') ?></p>
+            <p>Status: <span style="color: green;"><?php echo get_option(JKIT_STORE)['status'] ?></span></p>
 
         </div>
-
+        
     </div>
 
 

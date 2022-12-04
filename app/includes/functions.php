@@ -21,3 +21,21 @@ function load_jkit_theme_style($file)
         echo '</style>';
     }
 }
+
+function load_jkit_inc($file)
+{
+    $file_path = JKIT_DIR . "app/includes/$file.php";
+
+    if (file_exists($file_path)) {
+        require_once($file_path);
+    }
+}
+
+
+function jkit_setting_status($name)
+{
+    $options = get_option(JKIT_STORE);
+    if (isset($options[$name]) && !empty($options[$name])) {
+        echo 'checked="checked"';
+    }
+}

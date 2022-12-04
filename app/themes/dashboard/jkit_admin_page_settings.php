@@ -1,7 +1,4 @@
 <style>
-
-
-
     .v4_3 {
         width: 300px;
         height: 150px;
@@ -16,7 +13,7 @@
         overflow: hidden;
         margin: 1em 0;
 
-        
+
     }
 
     .v2_14 {
@@ -39,7 +36,7 @@
         color: rgba(255, 255, 255, 1);
         position: absolute;
         top: 10px;
-        
+
         font-weight: Thin;
         font-size: 16px;
         opacity: 1;
@@ -51,7 +48,7 @@
         color: rgba(255, 255, 255, 1);
         position: absolute;
         top: 42px;
-        
+
         font-weight: Bold;
         font-size: 20px;
         opacity: 1;
@@ -77,7 +74,7 @@
         color: rgba(255, 255, 255, 1);
         position: absolute;
         top: 107px;
-        
+
         font-weight: Black;
         font-size: 20px;
         opacity: 1;
@@ -88,47 +85,42 @@
         display: block;
 
     }
- 
 </style>
 
 <div class="jkit-dashboard-settings">
-    <h1 class="title">[ JKit Settings ]</h1>
-    <hr>
+    <form method="post">
     
 
+    <!---
+    <button class="reset">
+        Reset to Defaults
+    </button>
+    --->
 
-    <div class="plugin-detail">
-        
-            <div class="v4_3" style="position: relative;">
-                <div class="v2_14"></div><span class="v4_2">Quick Access</span><span class="v4_4">New Product via
-                    JKit Tools</span>
-                <div class="v4_5"></div><span class="v4_6">Create</span>
-            </div>
+    <input type="text" name="jkit_settings_updated" value="true" hidden>
 
-    </div>
+    <h1 class="title">[ JKit Settings ]</h1>
+    <br>
+    <button class="save">
+        Save The New Changes
+    </button>
 
-    <div class="plugin-detail">
-        
-            <div class="v4_3" style="position: relative;">
-                <div class="v2_14"></div><span class="v4_2">Quick Access</span><span class="v4_4">New Product via
-                    JKit Tools</span>
-                <div class="v4_5"></div><span class="v4_6">Create</span>
-            </div>
+    <?php
 
-    </div>
+    var_dump(get_option(JKIT_STORE));
 
-    <div class="plugin-detail">
-        
-            <div class="v4_3" style="position: relative;">
-                <div class="v2_14"></div><span class="v4_2">Quick Access</span><span class="v4_4">New Product via
-                    JKit Tools</span>
-                <div class="v4_5"></div><span class="v4_6">Create</span>
-            </div>
+    ?>
+    <hr>
+
+    <div class="jkit-setting">
+        <label for="jkit_setting_new_products_tag">Active new products tag</label>
+        <input type="checkbox" name="jkit_setting_new_products_tag" id="jkit_setting_new_products_tag" <?php jkit_setting_status('jkit_setting_new_products_tag') ?>>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus, aliquam doloremque deserunt minima eaque sapiente quam nobis laboriosam obcaecati perferendis amet ex eum quod facere ut tempore consequuntur enim dolorem.</p>
 
     </div>
 
 
 
 
-  
+    </form>
 </div>

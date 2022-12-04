@@ -1,12 +1,22 @@
 #wpcontent {
-    padding: 0 !important;
+    padding: 0 1em !important;
+    
+}
+
+.force-center {
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
 }
 
 .jkit-dashboard-settings {
     display: block;
     margin: 0 auto;
     max-width: 90%;
-    height: 90vh;
+    height: 80vh;
     padding: .5em 2em;
     margin: 2em auto;
     border-radius: .5em;
@@ -15,8 +25,54 @@
     direction: rtl;
     text-align: right;
     overflow-y: auto;
+    position: relative;
 
 }
+.jkit-dashboard-settings button.save {
+    display: block;
+    margin: 0 auto;
+    padding: .3em 3em;
+    border: .2em solid #00e44c;
+    background-color: #00e44c;
+    color: #fff;
+    border-radius: .5em;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.jkit-dashboard-settings button.save:hover {
+    background-color: #fff;
+    color: #00e44c;
+    transition: .3s;
+
+
+}
+
+.jkit-dashboard-settings button.reset {
+    position: absolute;
+    top: 4em;
+    right: 0;
+    left: 0;
+    padding: .6em 3em;
+    border: .3em solid #747474;
+    background-color: #747474;
+    color: #fff;
+    border-radius: .5em;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.jkit-dashboard-settings button.reset:hover {
+    border: .3em solid #747474;
+    background-color: #fff;
+    color: #747474;
+    transition: .3s;
+
+
+}
+
 
 .jkit-dashboard-settings .title {
     text-align: center;
@@ -71,3 +127,43 @@
 @media (min-width: 1200px) {}
 
 
+
+
+
+.jkit-dashboard-settings .jkit-setting {
+    padding: 2em;
+    border-radius: .5em;
+    background-color: #fff;
+    margin: 5em 0;
+    position: relative;
+}
+.jkit-dashboard-settings .jkit-setting label {
+    position: absolute;
+    display: block;
+    width: fit-content;
+    left: 0;
+    right: 0;
+    top: -1.5em;
+    padding: .5em 1em;
+    border-radius: .5em;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+    font-weight: 900;
+
+}
+.jkit-dashboard-settings .jkit-setting input[type=checkbox] {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: -.7em;
+    text-align: center;
+    margin: 0 auto;
+    border: .1em solid rgb(180, 180, 180);
+    
+    
+}
+.jkit-dashboard-settings .jkit-setting p {
+    text-align: center;
+}
