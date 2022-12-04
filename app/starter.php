@@ -10,13 +10,15 @@ class JStarter {
         require_once(JKIT_DIR . '/app/dashboard/pages/dashboard.php');
         require_once(JKIT_DIR . '/app/includes/functions.php');
 
+        
+
         $this->init();
 
     }
 
     public function init()
     {
-
+        load_jkit_theme_style("main");
         add_action('admin_menu', ['JKit\JStarter', 'jkit_add_menu_page']);
 
     }
