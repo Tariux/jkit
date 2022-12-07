@@ -13,14 +13,15 @@ function load_jkit_theme($file)
 
 function load_jkit_theme_style($file)
 {
-    $file_path = JKIT_DIR . "app/themes/styles/$file.css";
+    // Lol i did this !
+    add_action('admin_enqueue_scripts', function () use ($file) {
 
-    if (file_exists($file_path)) {
-        echo '<style>';
-        require_once($file_path);
-        echo '</style>';
-    }
+        $file_path = plugins_url(JKIT_PLUGIN_NAME . "/app/themes/styles/$file.css");
+        wp_enqueue_style('jkit-admin-theme', $file_path);
+    });
 }
+
+
 
 function load_jkit_inc($file)
 {

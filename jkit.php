@@ -24,7 +24,9 @@ class JInit
     {
         define('JKIT_DIR', dirname(__FILE__) . '/');
         define('JKIT_STORE', 'jkit_store_system');
+        define('JKIT_PLUGIN_NAME', 'jkit');
 
+        
         require_once(JKIT_DIR . '/app/starter.php');
 
         new JStarter;

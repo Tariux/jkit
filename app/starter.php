@@ -53,6 +53,9 @@ class JStarter {
         }
     }
 
+// __('JKit', 'jkit')
+
+
     public static function jkit_add_menu_page()
     {
         add_menu_page(__('JKit', 'jkit'), __('JKit', 'jkit'),
@@ -62,8 +65,13 @@ class JStarter {
         add_submenu_page('jkit_settings_handle', __('Settings', 'settings'), __('Settings', 'settings'),
         'manage_options', 'jkit-page-settings', 'jkit_admin_page_settings');
 
+        add_submenu_page('jkit_settings_handle', __('Custom Css', 'custom-css'), __('Custom Css', 'custom-css'),
+        'manage_options', 'jkit-page-custom-css', 'jkit_admin_page_custom_css');
+
         add_submenu_page('jkit_settings_handle', __('About', 'about'), __('About', 'about'),
         'manage_options', 'jkit-page-about', 'jkit_admin_page_about');
+
+        
     }
 
     

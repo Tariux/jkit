@@ -19,3 +19,11 @@ function jkit_admin_page_about()
     load_jkit_theme('dashboard/jkit_admin_page_about');
 
 }
+
+
+function jkit_admin_page_custom_css()
+{
+    load_jkit_inc('admin/custom_css');
+    load_jkit_theme('dashboard/jkit_admin_page_custom_css');
+
+}

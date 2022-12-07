@@ -167,3 +167,13 @@
 .jkit-dashboard-settings .jkit-setting p {
     text-align: center;
 }
+
+
+.jkit-dashboard-custom-css textarea {
+    background-color: #fff;
+    width: 100%;
+    height: 40vh;
+    border: 0;
+    direction: ltr;
+    text-align: left;
+}
